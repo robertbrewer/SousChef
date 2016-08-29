@@ -13,4 +13,7 @@
  *= require_tree .
  *= require_self
  */
- 
+ .jumbotron {
+ 	margin-top: 15px;
+ 	background-image: url(https://static.pexels.com/photos/8717/food-pot-kitchen-cooking-medium.jpg);
+ }
