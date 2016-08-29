@@ -1,6 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="jumbotron">
+ <center>
+<style>
+    /* Only necessary if you are using navbar-fixed-top */
+    body {
+      padding-top: 25px; padding-left: 25px; padding-right: 25px
+    }
+  </style>
+   <h1><strong><%= @recipe.name %></strong></h1>
+   <div class="resize">
+   <img src="<%= @recipe.image %>" style= 'height:420px; width:500px'>
+   </div>
+ </center>
+ <h3><strong>Name:</strong> <%= @recipe.name %></h3>
+ <h3><strong>Cuisine:</strong> <%= @recipe.cuisine %></h3>
+ <h3><strong>Category:</strong> <%= @recipe.category %></h3>
+ <h3><strong>Ingredients:</strong> <%= @recipe.ingredients %></h3>
+ <h3><strong>Preptime:</strong> <%= @recipe.prepTime %></h3>
+ <h3><strong>Cooktime:</strong> <%= @recipe.cookTime %></h3>
+ <h3><strong>Cookware:</strong> <%= @recipe.cookware %></h3>
+ <!-- <h3>Image: <%= @recipe.image %></h3> -->
+ <h3><strong>Instructions:</strong> <%= @recipe.instructions %></h3>
+</div>
+<%= link_to 'Back to Recipes', recipes_url , class: "btn btn-primary" %>
 
-<p>
+ 
+
+
+<!-- <p>
   <strong>Name:</strong>
   <%= @recipe.name %>
 </p>
@@ -47,3 +73,4 @@
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %>
+ -->
