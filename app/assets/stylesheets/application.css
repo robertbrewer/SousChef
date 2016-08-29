@@ -17,3 +17,19 @@
  	margin-top: 15px;
  	background-image: url(https://static.pexels.com/photos/8717/food-pot-kitchen-cooking-medium.jpg);
  }
+
+ .jumbotron h1 {
+ 	letter-spacing: 6px;
+ }
+
+ li {
+ 	list-style:none;
+ }
+
+ .steps {
+ 	color: white;
+ 	background-color: #6699cc;
+ 	border: 2px solid gray;
+ 	margin-top: 20px;
+ 	padding: 0 15px 15px 15px;
+ }
