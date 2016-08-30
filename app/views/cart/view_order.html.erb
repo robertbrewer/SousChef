@@ -1,16 +1,16 @@
-<h1>My Meal</h1>
+<div class="jumbotron h1" style="color:white;"">My Meal</div>
 
 <div>
 	<% @line_items.each do |line_item| %>
 	<ul>
-		<li><%= line_item.recipe.name %></li>
+		<h2><li><%= line_item.recipe.name %></li></h2>
 		<li>Prep Time:<%= line_item.recipe.prepTime %></li>
 		<li>Cook Time:<%= line_item.recipe.cookTime %></li>
-		<li>Total Time:<%= line_item.total_time %></li>
+		<strong><li>Total Time:<%= line_item.total_time %></li></strong>
 	</ul>
 	<% end %>
 </div>
 
 <div>
-	<%= link_to "Start cooking?", checkout_path, class:"btn btn-success" %>
+	<%= link_to "Start cooking!", checkout_path, class:"btn btn-success" %>
 </div>

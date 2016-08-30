@@ -28,6 +28,8 @@ gem 'better_errors', '~> 2.1', '>= 2.1.1'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'figaro'
 
+gem "pg"
+gem "rails_12factor"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -45,6 +47,13 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem 'sqlite3'
+end
+
+#for Heroku
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
