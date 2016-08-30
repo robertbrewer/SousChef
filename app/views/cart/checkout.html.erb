@@ -1,0 +1,11 @@
+<h1>Lets Cook!</h1>
+<p>Here are the recipes you've chosen:</p>
+
+<% @meal.order_items.each do |key, value| %>
+<ul>
+	<li><%= Recipe.find(key).name %> - <%= value %></li>
+</ul>
+<% end %>
+<p>
+	<strong>Total Cook Time:</strong> <%= @meal.total_cook_time %>
+</p>

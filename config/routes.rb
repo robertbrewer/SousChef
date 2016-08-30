@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  post 'add_to_cart' => 'cart#add_to_cart'
+
+  get 'view_order' => 'cart#view_order'
+
+  get 'checkout' => 'cart#checkout'
+
+  resources :line_items
+  resources :meals
   root 'welcome#index'
   
   resources :recipes

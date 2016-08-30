@@ -20,6 +20,17 @@
  <h3><strong>Cookware:</strong> <%= @recipe.cookware %></h3>
  <!-- <h3>Image: <%= @recipe.image %></h3> -->
  <h3><strong>Instructions:</strong> <%= @recipe.instructions %></h3>
+
+  <p>
+    <%= form_tag('/add_to_cart') do %>
+    <div class="cant-see-me">
+    <%= number_field_tag :recipe_id, @recipe.id %>
+    </div>
+      <%= submit_tag "Add to Meal!", class: "btn btn-danger" %>
+      <% end %>    
+  </p>
+
+
 </div>
 <%= link_to 'Back to Recipes', recipes_url , class: "btn btn-primary" %>
 
